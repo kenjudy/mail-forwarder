@@ -1,0 +1,81 @@
+From ken@foo.bar Wed Apr 29 14:08:16 2015
+Received: from [127.0.0.1] (port=46795 helo=[10.0.1.25])
+	by box000.bluehost.com with esmtpsa (TLSv1:DHE-RSA-AES256-SHA:256)
+	(Exim 4.84)
+	(envelope-from <ken@foo.bar>)
+	id 1YnYHI-0005SM-BK
+	for test.test@foo.bar; Wed, 29 Apr 2015 14:08:16 -0600
+From: "Ken H. Judy" <ken@foo.bar>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_EC51BA14-B1FE-4222-9168-9FCB01253E6A"
+Subject: Fwd: Test
+Date: Wed, 29 Apr 2015 16:08:06 -0400
+References: <98B0EA65-2E5C-4B5D-9ACB-4AC827715D3F@foo.bar>
+To: test.test@foo.bar
+Message-Id: <8154962D-09A1-4F0F-892B-5D6977C1794D@foo.bar>
+Mime-Version: 1.0 (Mac OS X Mail 8.2 \(2098\))
+X-Mailer: Apple Mail (2.2098)
+X-Identified-User: {1275:box000.bluehost.com:fooc:foo.bar} {sentby:smtp auth 127.0.0.1 authed with ken@foo.bar}
+
+
+--Apple-Mail=_EC51BA14-B1FE-4222-9168-9FCB01253E6A
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain;
+	charset=us-ascii
+
+TEST
+
+> Begin forwarded message:
+> 
+> From: "Ken H. Judy" <ken@foo.bar>
+> Subject: Test
+> Date: April 29, 2015 at 5:29:28 AM EDT
+> To: "Ken H. Judy" <kenjudy@bar.foo>
+> 
+> 
+> 
+> --
+> Ken H. Judy
+
+
+--Apple-Mail=_EC51BA14-B1FE-4222-9168-9FCB01253E6A
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=us-ascii
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html =
+charset=3Dus-ascii"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; -webkit-line-break: after-white-space;" =
+class=3D"">TEST<br class=3D""><div style=3D""><br class=3D""><blockquote =
+type=3D"cite" class=3D""><div class=3D"">Begin forwarded =
+message:</div><br class=3D"Apple-interchange-newline"><div =
+style=3D"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; =
+margin-left: 0px;" class=3D""><span style=3D"font-family: =
+-webkit-system-font, Helvetica Neue, Helvetica, sans-serif; =
+color:rgba(0, 0, 0, 1.0);" class=3D""><b class=3D"">From: =
+</b></span><span style=3D"font-family: -webkit-system-font, Helvetica =
+Neue, Helvetica, sans-serif;" class=3D"">"Ken H. Judy" &lt;<a =
+href=3D"mailto:ken@foo.bar" class=3D"">ken@foo.bar</a>&gt;<br =
+class=3D""></span></div><div style=3D"margin-top: 0px; margin-right: =
+0px; margin-bottom: 0px; margin-left: 0px;" class=3D""><span =
+style=3D"font-family: -webkit-system-font, Helvetica Neue, Helvetica, =
+sans-serif; color:rgba(0, 0, 0, 1.0);" class=3D""><b class=3D"">Subject: =
+</b></span><span style=3D"font-family: -webkit-system-font, Helvetica =
+Neue, Helvetica, sans-serif;" class=3D""><b class=3D"">Test</b><br =
+class=3D""></span></div><div style=3D"margin-top: 0px; margin-right: =
+0px; margin-bottom: 0px; margin-left: 0px;" class=3D""><span =
+style=3D"font-family: -webkit-system-font, Helvetica Neue, Helvetica, =
+sans-serif; color:rgba(0, 0, 0, 1.0);" class=3D""><b class=3D"">Date: =
+</b></span><span style=3D"font-family: -webkit-system-font, Helvetica =
+Neue, Helvetica, sans-serif;" class=3D"">April 29, 2015 at 5:29:28 AM =
+EDT<br class=3D""></span></div><div style=3D"margin-top: 0px; =
+margin-right: 0px; margin-bottom: 0px; margin-left: 0px;" class=3D""><span=
+ style=3D"font-family: -webkit-system-font, Helvetica Neue, Helvetica, =
+sans-serif; color:rgba(0, 0, 0, 1.0);" class=3D""><b class=3D"">To: =
+</b></span><span style=3D"font-family: -webkit-system-font, Helvetica =
+Neue, Helvetica, sans-serif;" class=3D"">"Ken H. Judy" &lt;<a =
+href=3D"mailto:kenjudy@bar.foo" class=3D"">kenjudy@bar.foo</a>&gt;<br =
+class=3D""></span></div><br class=3D""><div class=3D""><br class=3D""><br =
+class=3D"">--<br class=3D"">Ken H. Judy<br =
+class=3D""></div></blockquote></div><br class=3D""></body></html>=
+
+--Apple-Mail=_EC51BA14-B1FE-4222-9168-9FCB01253E6A--

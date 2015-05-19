@@ -1,0 +1,11 @@
+recipient: ken@foo.bar
+allowed_sender: ken@bar.foo
+whitelist_to: [test.test@foo.bar]
+blacklist_from: [ken@foo.bad.bar]
+                 
+method: webapi
+  
+sendgrid_web_api:
+  username: 'ken'
+  password: 'foo'
+

@@ -1,0 +1,14 @@
+recipient: ken@foo.bar
+allowed_sender: ken@bar.foo
+whitelist_to: [test.test@foo.bar]
+blacklist_from: [ken@foo.bad.bar]
+                 
+method: smtp
+smtp:
+  address: smtp.server.com
+  port: 26
+  domain: judykat.com
+  user_name: ken
+  password: foo
+  authentication: plain
+  enable_starttls_auto: true
