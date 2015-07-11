@@ -24,29 +24,36 @@ describe MailForwarder do
         end
       
         it "delivers mail" do
-          assert_equal(Mail::TestMailer.deliveries.length, 1)
+          assert_equal(1, Mail::TestMailer.deliveries.length)
         end
     
         it "changes recipient " do
-          assert_equal(Mail::TestMailer.deliveries.first.to, [@properties['recipient']])
+          assert_equal([@properties['recipient']], Mail::TestMailer.deliveries.first.to)
         end
 
         it "uses allowed sender " do
-          assert_equal(Mail::TestMailer.deliveries.first.from, [@properties['allowed_sender']])
+          assert_equal([@properties['allowed_sender']], Mail::TestMailer.deliveries.first.from)
         end
 
         it "sets reply to to original sender " do
-          assert_equal(Mail::TestMailer.deliveries.first.reply_to, ['ken@foo.bar'])
+          assert_equal(['ken@foo.bar'], Mail::TestMailer.deliveries.first.reply_to)
         end
 
         it "uses allowed sender " do
-          assert_equal(Mail::TestMailer.deliveries.first.from, [@properties['allowed_sender']])
+          assert_equal([@properties['allowed_sender']], Mail::TestMailer.deliveries.first.from)
         end
 
         it "sets reply to to original sender " do
-          assert_equal(Mail::TestMailer.deliveries.first.reply_to, ['ken@foo.bar'])
+          assert_equal(['ken@foo.bar'], Mail::TestMailer.deliveries.first.reply_to)
         end
     
+        it "correctly formats text-part" do
+          assert_match(/^TEST/, Mail::TestMailer.deliveries.first.text_part.body.encoded)
+        end
+
+        it "correctly formats html-part" do
+          assert_match(/^<html><head>/, Mail::TestMailer.deliveries.first.html_part.body.encoded)
+        end
       end
 
       describe "not to whitelist" do
@@ -56,7 +63,7 @@ describe MailForwarder do
         end
 
         it "doesn't deliver mail" do
-          assert_equal(Mail::TestMailer.deliveries.length, 0)
+          assert_equal(0, Mail::TestMailer.deliveries.length)
         end
       end
 
@@ -67,7 +74,7 @@ describe MailForwarder do
         end
 
         it "doesn't deliver mail" do
-          assert_equal(Mail::TestMailer.deliveries.length, 0)
+          assert_equal(0, Mail::TestMailer.deliveries.length)
         end
       end
     
@@ -77,7 +84,7 @@ describe MailForwarder do
         end
 
         it "doesn't deliver mail" do
-          assert_equal(Mail::TestMailer.deliveries.length, 0)
+          assert_equal(0, Mail::TestMailer.deliveries.length)
         end
       end
     end
