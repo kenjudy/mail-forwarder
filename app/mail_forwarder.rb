@@ -30,7 +30,8 @@ class MailForwarder
         m.from =  @properties['allowed_sender']
         m.reply_to = reply_to.first
         m.subject = "#{reply_to.first}: #{source.subject}"
-        m.body = source.body
+        m.text = source.text_part.body.encoded
+        m.html = source.html_part.body.encoded
       end
       client.send(mail)
     end
