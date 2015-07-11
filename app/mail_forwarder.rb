@@ -5,7 +5,7 @@ require 'yaml'
 require 'sendgrid-ruby'
 
 class MailForwarder
-  
+
   def self.run(properties = YAML.load_file(File.join(__dir__, '..', 'config', 'properties.yml')))
     @properties = properties
     return unless ARGF.any?
@@ -19,7 +19,7 @@ class MailForwarder
   def self.send?(m)
     (@properties['whitelist_to'] & m.to).any? && (@properties['blacklist_from'] & m.from).blank?
   end
-  
+
   def self.deliver_sendgrid_webapi
     client = SendGrid::Client.new(api_user: @properties['sendgrid_web_api']['username'], api_key: @properties['sendgrid_web_api']['password'])
     source = Mail.new ARGF.read
@@ -29,13 +29,14 @@ class MailForwarder
         reply_to = source.from
         m.from =  @properties['allowed_sender']
         m.reply_to = reply_to.first
-        m.subject = source.subject
-        m.text = source.body
+        m.subject = "#{reply_to.first}: #{source.subject}"
+        m.text = source.text_part
+        m.html = source.html_part
       end
       client.send(mail)
     end
   end
-  
+
   def self.deliver_smtp
     prepare_smtp_mail
     m = Mail.new ARGF.read
@@ -48,7 +49,7 @@ class MailForwarder
     end
     return result
   end
-  
+
   def self.prepare_smtp_mail
     unless ENV['environment'] == 'test'
       Mail.defaults do
